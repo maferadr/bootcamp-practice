@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header{
+    background-color: #eed09d;
+    font-family: 'Playfair Display', serif, SemiBold;
+    display: flex;
+    flex-direction: row;
+}
+
+.text-header{
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    line-height: 1;
+}
+
+.img-header{
+    flex: 1;
+    text-align: left;
+    flex-grow: 1;
+    align-items: left;
+    justify-content: left;
+    padding-right: 85%;
+}
+
+.img-header img{
+    text-align: left;
+    border-radius: 50%;
+    height: 35%;
+    width: 25%;
+    position: absolute;
+    z-index: 1;
+}
+
+.header{
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-color: #946e48;
+}
+
+nav a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    padding: 14px 20px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+aside{
+    flex: 1;
+    text-align: left;
+    padding: 60px;
+    background-color: #a98e60d1;
+    width: 22%;
+    text-align: center;
+}
+
+img{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.general{
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    height: 320px;
+    text-align: right;
+    padding: 1%;
+    justify-content: space-evenly;
+    position: relative;
+    margin: 0 5%;
+    border: 1px solid rgba(128, 128, 128, 0.811);
+}
+
+.general:hover{
+    box-shadow: 5px 8px 15px #a98e60d1;
+}
+
+.p-general{
+    line-height: 1;
+    align-items: center;
+}
+
+.general-img{
+    padding-top: 10%;
+    width: 40%;
+    align-items: center;
+}
+
+#activities{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: flex-start;
+    height: 35%;
+    padding-bottom: 5%;
+    box-shadow: 5px 8px 15px #a98e60d1;
+}
+
+#activities-1, #activities-2, #activities-3{
+    border: 1px solid rgba(128, 128, 128, 0.811);
+    margin: 10px;
+    flex: 0 0 400px;
+    border-radius: 10px;
+    padding-bottom: 0;
+    height: 250px;
+    border-bottom: none;
+}
+
+.img-act{
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: -1;
+}
+
+#activities-1:hover:before{
+    z-index: 1;
+    content: 'Good communication skills, Charismatic and a Social person, Quick learner, good at developing roles in leadership, time management and multitasking.';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.515);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 310px;
+    width: 400px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#activities-2:hover:before{
+    z-index: 1;
+    content: 'Knowledge of HTML and CSS for basic Web Design structure, basics on JavaScript and React JS. Intermediate experience working on GitHub repositories and local Terminals.';
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.515);
+    display: flex;
+    flex-wrap: wrap;
+    height: 310px;
+    width: 400px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#activities-3:hover:before{
+    z-index: 1;
+    content: 'Looking forward to becoming myself in a Freelancer and developing as much programming languages as I can. Learning is always going to be the best way to involve myself in.';
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.515);
+    display: flex;
+    flex-wrap: wrap;
+    height: 310px;
+    width: 400px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+footer{
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.689);
+    opacity: .5;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+h2{
+    font-size: 25px;
+    font-family: 'Playfair Display', serif, SemiBold;
+}
+
+h3{
+    font-family: 'Lobster', sans-serif;
+    font-size: 30px;
+}
+
+h4{
+    font-family: 'DM Serif Display', serif;
+}
+
+footer a{
+    text-decoration: none;
+    padding: 14px 20px;
+}
+ul li{
+    list-style: none;
+}
+
+.footer{
+    display: none;
+}
+
+footer:hover .footer{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    cursor: grab;
+}
+
+li a:hover{
+    font-size: larger;
+    cursor: grab;
+    transform: scale(1.1);
+}
+
+nav a:hover{
+    font-size: larger;
+    cursor: grab;
+    border-bottom: 3px solid white;
+}
+
+@media screen and (max-width: 768px) {
+    header,
+    main {
+      flex-direction: column;
+    }
+
+    section {
+      padding-right: 0;
+    }
+
+    aside {
+      width: 100%;
+      text-align: center;
+    }
+
+    #activities{
+        text-align: center;
+        align-items: center;
+        padding: 10%;
+    }
+
+    #activities-1, #activities-2, #activities-3{
+        padding: 5%;
+    }
+
+    .img-act{
+        width: 100%;
+    }
+
+
+  }
+
+/* TO-DO
+Make the webpage responsive with media querys, fix the typography
+work on the links of the navbar and footers and edit hover texts. */
+
+
+
